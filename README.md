@@ -7,10 +7,14 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## ADDRESSING 3 DEADLY SINS IN WEB DEVELOPMENT
 
-
-
+1.) Hardcoding queries
+    Can be seen in app/Http/Controllers/Auth/RegisterController.php line 68
+2.) Using context-independent cookies
+    Remember me token is context-dependent. Can be seen in DB where the token is hashed and is dependent to the user
+3.) Using magic/hidden inputs in forms and accessing them
+    Both the login and registration form don't use hidden inputs except csrf tokens which is unique to each forms and can only be used once.
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

@@ -10,11 +10,17 @@
 ## ADDRESSING 3 DEADLY SINS IN WEB DEVELOPMENT
 
 1.) Hardcoding queries
+<br>
     Can be seen in app/Http/Controllers/Auth/RegisterController.php line 68
+<br>
 2.) Using context-independent cookies
+<br>
     Remember me token is context-dependent. Can be seen in DB where the token is hashed and is dependent to the user
+<br>
 3.) Using magic/hidden inputs in forms and accessing them
+<br>
     Both the login and registration form don't use hidden inputs except csrf tokens which is unique to each forms and can only be used once.
+<br>
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

@@ -64,10 +64,12 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        
+        //DB::insert('insert into users (name,email,password) values (?, ?,?)', [$data['name'], $data['email'], Hash::make($data['password']) ]) 5th sin - hardcoding queries
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-        ]);
+        ]);  //using Auth Middleware provided by Laravel
     }
 }
